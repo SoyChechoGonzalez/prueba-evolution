@@ -3,8 +3,7 @@ import './FilterTable.css';
 import PokemonList from '../PokemonList/PokemonList.jsx';
 
 const FilterTable = () => {
-	const [pokemon, setPokemon] = useState([]);
-	
+	const [pokemons, setPokemons] = useState([]);
 	const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/';
 	
 	const getAPI = () => {
@@ -18,9 +17,10 @@ const FilterTable = () => {
 							.then(response => response.json())
 							.then(data => {
 								list.push(data);
-								setPokemon([...list]);
+								setPokemons([...list]);
 							})
 							.catch(error => console.log(error));
+						
 					}
 				);
 			});
@@ -32,7 +32,7 @@ const FilterTable = () => {
 	
 	return (
 		<div className='FilterTable'>
-			<PokemonList pokemon={pokemon} />
+			<PokemonList pokemons={pokemons} />
 		</div>
 	);
 };

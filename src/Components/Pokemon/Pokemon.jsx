@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Pokemon = ({name, imagen}) => {
+const Pokemon = ({iconClassName}) => {
 	return (
 		<div className='Pokemon'>
-			<h1>{name}</h1>
-			<img src={imagen} alt={name} />
+			<img src={iconClassName} />
 		</div>
 	);
 };

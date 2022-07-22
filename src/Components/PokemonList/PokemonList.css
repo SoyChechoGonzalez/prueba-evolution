@@ -1,0 +1,12 @@
+.header-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+}
