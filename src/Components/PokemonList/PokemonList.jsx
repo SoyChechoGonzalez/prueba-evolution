@@ -2,14 +2,19 @@ import React from 'react';
 import './PokemonList.css';
 
 import FilterableTable from 'react-filterable-table';
-import Pokemon from '../Pokemon/Pokemon.jsx';
 
 const PokemonList = ({pokemons}) => {
 	const renderImage = (props) => {
 		return (
-			<Pokemon key={props.value}
-			         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.value}.png`}
-			         alt={props.record.name} title={props.record.name} />
+			<img key={props.value}
+			     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.value}.png`}
+			     alt={props.record.name} title={props.record.name} />
+		);
+	};
+	const renderHP = (props) => {
+		console.log(props.value);
+		return (
+			<span key={props.value}>{props.value}</span>
 		);
 	};
 	const fields = [
@@ -22,7 +27,49 @@ const PokemonList = ({pokemons}) => {
 			sortable: false,
 			render: renderImage
 		},
-		{name: 'name', displayName: 'Nombre', inputFilterable: true, sortable: true}
+		{name: 'name', displayName: 'Nombre', inputFilterable: true, sortable: true},
+		{
+			name: `stats.${0}.base_stat`,
+			displayName: 'Hp',
+			inputFilterable: true,
+			sortable: true,
+			render: renderHP
+		},
+		{
+			name: `stats.${1}.base_stat`,
+			displayName: 'Ataque',
+			inputFilterable: true,
+			sortable: true,
+			render: renderHP
+		},
+		{
+			name: `stats.${2}.base_stat`,
+			displayName: 'Defensa',
+			inputFilterable: true,
+			sortable: true,
+			render: renderHP
+		},
+		{
+			name: `stats.${3}.base_stat`,
+			displayName: 'Ataque Especial',
+			inputFilterable: true,
+			sortable: true,
+			render: renderHP
+		},
+		{
+			name: `stats.${4}.base_stat`,
+			displayName: 'Defensa Especial',
+			inputFilterable: true,
+			sortable: true,
+			render: renderHP
+		},
+		{
+			name: `stats.${5}.base_stat`,
+			displayName: 'Velocidad',
+			inputFilterable: true,
+			sortable: true,
+			render: renderHP
+		}
 	];
 	
 	return (
