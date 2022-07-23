@@ -20,7 +20,6 @@ const FilterTable = () => {
 								setPokemons([...list]);
 							})
 							.catch(error => console.log(error));
-						
 					}
 				);
 			});

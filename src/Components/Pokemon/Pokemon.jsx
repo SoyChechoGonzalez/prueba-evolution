@@ -1,11 +1,7 @@
 import React from 'react';
 
-const Pokemon = ({iconClassName}) => {
-	return (
-		<div className='Pokemon'>
-			<img src={iconClassName} />
-		</div>
-	);
+const Pokemon = ({src, alt, title}) => {
+	return <img src={src} alt={alt} title={title} />;
 };
 
 export default Pokemon;
