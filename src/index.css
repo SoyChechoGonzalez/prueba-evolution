@@ -15,9 +15,3 @@ a {
 ol, ul {
 	list-style: none;
 }
-
-table, th, td {
-	border: 1px solid #000000;
-	border-collapse: collapse;
-	padding: 1em 2em;
-}

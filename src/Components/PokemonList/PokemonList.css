@@ -10,3 +10,82 @@
 	align-items: center;
 	padding: 0.5rem;
 }
+
+table, th, td {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	padding: 1em 2em;
+}
+
+tr:nth-child(odd):not(thead tr) {
+	background-color: #f2f2f2;
+}
+
+thead tr {
+	background: #000000;
+	color: #ffffff;
+}
+
+thead tr th {
+	border: 1px solid #ffffff;
+}
+
+thead tr th span:first-child {
+	margin-right: 0.5rem;
+}
+
+thead tr th .fa-sort {
+	font-size: 0.8em;
+}
+
+.filter-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.filter-container input {
+	padding: 0.5em 1em;
+	border: 1px solid #000000;
+	border-radius: 4px;
+}
+
+.filter-container .close {
+	position: absolute;
+	right: 0.3em;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+nav {
+	display: inline-block;
+	overflow: hidden;
+}
+
+nav ul {
+	display: flex;
+	gap: 2em;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	padding: 1em;
+}
+
+.active a {
+	background: cadetblue;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+select.form-control {
+	padding: 0.5em 1.5em;
+	font-size: 1em;
+}
+
+span {
+	font-size: 1em;
+}
